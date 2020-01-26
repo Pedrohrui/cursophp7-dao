@@ -2,10 +2,20 @@
 
 require_once("config.php");
 
-$aluno = new Usuario("aluno","@lun0");
-$aluno->insert();
-echo $aluno;
+$usuario = new Usuario();
+$usuario->loadbyId(8);
+$usuario->update("professor","!@#$%¨&*");
+echo $usuario;
 
+
+
+
+
+//---------------------------------------------------
+//Criando um novo usuario
+//$aluno = new Usuario("aluno","@lun0");
+//$aluno->insert();
+//echo $aluno;
 //----------------------------------------------------
 //carrega um usuario usando o login e a senha
 //$usuario = new Usuario();
